@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC2970DF-C31E-4AA3-8147-505684EC4E94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Bill.cs" />
+    <Compile Include="BL\HangHoa.cs" />
+    <Compile Include="BL\Login.cs" />
+    <Compile Include="BL\Product.cs" />
+    <Compile Include="BL\TempBill.cs" />
+    <Compile Include="DAL\BillDAL.cs" />
+    <Compile Include="DAL\Database.cs" />
+    <Compile Include="DAL\HangHoaDAL.cs" />
+    <Compile Include="DAL\HoaDonDAL.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="PL\HangHoaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\HangHoaUI.Designer.cs">
+      <DependentUpon>HangHoaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\QuanLyDanhMucUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\QuanLyDanhMucUI.Designer.cs">
+      <DependentUpon>QuanLyDanhMucUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\QuanLyDoanhThuUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\QuanLyDoanhThuUi.Designer.cs">
+      <DependentUpon>QuanLyDoanhThuUi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\QuanLyHoaDonUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\QuanLyHoaDonUI.Designer.cs">
+      <DependentUpon>QuanLyHoaDonUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\QuanLyKhoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\QuanLyKhoUI.Designer.cs">
+      <DependentUpon>QuanLyKhoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\QuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SaleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SaleUI.Designer.cs">
+      <DependentUpon>SaleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AdminUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AdminUI.Designer.cs">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\HangHoaUI.resx">
+      <DependentUpon>HangHoaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\QuanLyDanhMucUI.resx">
+      <DependentUpon>QuanLyDanhMucUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\QuanLyDoanhThuUi.resx">
+      <DependentUpon>QuanLyDoanhThuUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\QuanLyHoaDonUI.resx">
+      <DependentUpon>QuanLyHoaDonUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\QuanLyKhoUI.resx">
+      <DependentUpon>QuanLyKhoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\QuanLyTaiKhoan.resx">
+      <DependentUpon>QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SaleUI.resx">
+      <DependentUpon>SaleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AdminUI.resx">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ke-kho-hang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\các loại bill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOOST-PRODUCTIVITY-for-2018.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-technology-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mid-season-sale-252613.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
